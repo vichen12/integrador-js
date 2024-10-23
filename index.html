@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proyecto Integrador</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container_principalHeader">
+      <div class="container_contentHeader">
+        <div class="container_search">
+          <input placeholder="Ingrese su elemento..." type="text" id='input-search' />
+          <button id="button-search">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-search">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+              <path d="M21 21l-6 -6" />
+            </svg>
+          </button>
+        </div>
+        <div>
+          <button class="agregar_elemento" id="add-element">
+            <p>Agregar Elemento</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-table-plus">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M12.5 21h-7.5a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v7.5" />
+              <path d="M3 10h18" />
+              <path d="M10 3v18" />
+              <path d="M16 19h6" />
+              <path d="M19 16v6" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <div class="container_view">
+      <aside class="listAside">
+        <h2>
+          Categorías
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-category">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M4 4h6v6h-6z" />
+            <path d="M14 4h6v6h-6z" />
+            <path d="M4 14h6v6h-6z" />
+            <path d="M17 17m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+          </svg>
+        </h2>
+        <ul id="listFilter">
+        </ul>
+      </aside>
+      <div class="store" id="store-container"></div>
+    </div>
+
+    <!-- POPUP -->
+    <div class="popUpContainer_principal" id="modalPopUp">
+      <div class="popUpContainer">
+        <h1>Agregar o modificar un producto</h1>
+        <button class="closeModal" id="close-modal"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+            viewBox="0 0 24 24" fill="red" class="icon icon-tabler icons-tabler-filled icon-tabler-square-x">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M19 2h-14a3 3 0 0 0 -3 3v14a3 3 0 0 0 3 3h14a3 3 0 0 0 3 -3v-14a3 3 0 0 0 -3 -3zm-9.387 6.21l.094 .083l2.293 2.292l2.293 -2.292a1 1 0 0 1 1.497 1.32l-.083 .094l-2.292 2.293l2.292 2.293a1 1 0 0 1 -1.32 1.497l-.094 -.083l-2.293 -2.292l-2.293 2.292a1 1 0 0 1 -1.497 -1.32l.083 -.094l2.292 -2.293l-2.292 -2.293a1 1 0 0 1 1.32 -1.497z" />
+          </svg>
+        </button>
+        <div class="containerInputs">
+          <input type="text" placeholder="Ingrese un nombre..." id="name" />
+          <input type="text" placeholder="Ingrese una url de imagen..." id="img" />
+          <input type="number" placeholder="precio" value="0" id="price" />
+          <select id="category">
+            <option value="">Seleccione una categoría</option>
+            <option>Gaseosas</option>
+            <option>Hamburguesas</option>
+            <option>Papas</option>
+          </select>
+        </div>
+
+        <div class="containerButtons">
+          <button id="save" class="accept">Guardar</button>
+          <button id="delete" class="delete">Eliminar</button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
